@@ -16,8 +16,7 @@ int main(int argc, char *argv[]) {
 
     pthread_t threads[NUM_THREADS];
     for (int i = 0; i < NUM_THREADS; i++) {
-        pthread_create(&threads[i], NULL, do_work,
-                       reinterpret_cast<void *>(threads[0], threads[1], threads[2], threads[3]));
+        pthread_create(&threads[i], NULL, do_work,NULL);
         pthread_join(threads[i], NULL);
     }
     return 0;
