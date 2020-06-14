@@ -36,3 +36,22 @@ Yes, this function header needs to stay the same; otherwise, the challenge is no
 */
 }
 
+
+
+
+
+// divides array by mod into 4 groups and match to a single thread then proceeds to add to sum
+ if((i % 4 == 0) && (thread == threads[0])){
+      MyNumbers.setSum(MyNumbers.getSum()+array[i]);
+ }
+ else if ((i % 4 ==1) && (thread ==threads[1]))
+     MyNumbers.setSum(MyNumbers.getSum()+array[i]);
+}
+else if ((i % 4 ==2) && (thread ==threads[2]))
+    MyNumbers.setSum(MyNumbers.getSum()+array[i]);
+}
+else if ((i % 4 ==3) && (thread ==threads[3]))
+    MyNumbers.setSum(MyNumbers.getSum()+array[i]);
+}
+
+
