@@ -38,7 +38,7 @@ int sum = 0;
         int *end = MyNumbers.getMyarray() + MyNumbers.getSize();
         for (int *it = MyNumbers.getMyarray(); it != end; it++) {
 
-
+cout<<pthread_self()<<endl;
             int thread_part = pthread_self();
 
             for (int i = thread_part * (MyNumbers.getSize() / 4); i < (thread_part + 1) * (MyNumbers.getSize() / 4); i++)
@@ -47,6 +47,12 @@ int sum = 0;
 
 
          }
+        
+        //mutex here
+        // update global
+        //mutex unlock here
+        // kill thread
+        
  cout<<endl<<sum <<endl;
     }
 }
