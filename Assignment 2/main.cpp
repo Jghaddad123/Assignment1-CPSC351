@@ -36,23 +36,21 @@ int sum = 0;
     // Each thread computes sum of 1/4th of array
     if (MyNumbers.getMyarray() != nullptr) {
         int *end = MyNumbers.getMyarray() + MyNumbers.getSize();
-        for (int *it = MyNumbers.getMyarray(); it != end; it++) {
+            for (int *it = MyNumbers.getMyarray(); it != end; it++) {
 
-cout<<pthread_self()<<endl;
-            int thread_part = pthread_self();
-
-            for (int i = thread_part * (MyNumbers.getSize() / 4); i < (thread_part + 1) * (MyNumbers.getSize() / 4); i++)
+            int thread_part = (pthread_self()%NUM_THREADS)+1;
+            for (int i = thread_part * (MyNumbers.getSize() / NUM_THREADS); i < (thread_part + 1) * (MyNumbers.getSize() / NUM_THREADS); i++)
                 sum += *it;
 
 
 
          }
-        
+
         //mutex here
         // update global
         //mutex unlock here
         // kill thread
-        
+
  cout<<endl<<sum <<endl;
     }
 }
