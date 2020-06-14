@@ -4,14 +4,14 @@
 #include "Numbers.h"
 #include <iostream>
 using namespace std;
-
+const int ARRAY_SIZE = 40;
 // Default Constructor - will allocate a dynamic array with 4000
 Numbers::Numbers() {
     cout << "default constructor is called" << endl;
-    myarray = new int[10];
-    for (int i = 0; i < 10; i++) {
-        myarray[i] = int((rand() % 400 + 100)) /100;
-        cout << myarray[i] << endl;
+    size = ARRAY_SIZE;
+    myarray = new int[ARRAY_SIZE];
+    for (int i = 0; i < ARRAY_SIZE; i++) {
+        myarray[i] = int((random() % 400 + 100)) /100;
     }
 }
 
