@@ -1,7 +1,3 @@
-//
-// Created by Beccs on 6/8/20.
-//
-
 #ifndef MULTITHREADING_NUMBERS_H
 #define MULTITHREADING_NUMBERS_H
 
