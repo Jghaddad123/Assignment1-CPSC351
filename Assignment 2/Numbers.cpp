@@ -1,6 +1,3 @@
-//
-// Created by Beccs on 6/8/20.
-//
 #include "Numbers.h"
 #include <iostream>
 using namespace std;
